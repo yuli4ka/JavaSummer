@@ -5,32 +5,32 @@ public class AMainClass {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
 
-//    ANumbersFromOneToN aNumbersFromOneToN = new ANumbersFromOneToN(in);
-//    aNumbersFromOneToN.doTask();
-//
-//    BNumbersFromAToB bNumbersFromAToB = new BNumbersFromAToB(in);
-//    bNumbersFromAToB.doTask();
+    ANumbersFromOneToN aNumbersFromOneToN = new ANumbersFromOneToN(in);
+    aNumbersFromOneToN.doTask();
 
-//    CAckermanFunction cAckermanFunction =new CAckermanFunction(in);
-//    cAckermanFunction.doTask();
+    BNumbersFromAToB bNumbersFromAToB = new BNumbersFromAToB(in);
+    bNumbersFromAToB.doTask();
 
-//    DExactDegreeOfTwo dExactDegreeOfTwo = new DExactDegreeOfTwo(in);
-//    dExactDegreeOfTwo.doTask();
+    CAckermanFunction cAckermanFunction =new CAckermanFunction(in);
+    cAckermanFunction.doTask();
 
-//    ESumOfDigits eSumOfDigits = new ESumOfDigits(in);
-//    eSumOfDigits.doTask();
+    DExactDegreeOfTwo dExactDegreeOfTwo = new DExactDegreeOfTwo(in);
+    dExactDegreeOfTwo.doTask();
 
-//    FDigitsFromRightToLeft fDigitsFromRightToLeft = new FDigitsFromRightToLeft(in);
-//    fDigitsFromRightToLeft.doTask();
+    ESumOfDigits eSumOfDigits = new ESumOfDigits(in);
+    eSumOfDigits.doTask();
 
-//    GDigitsFromLeftToRight gDigitsFromLeftToRight = new GDigitsFromLeftToRight(in);
-//    gDigitsFromLeftToRight.doTask();
+    FDigitsFromRightToLeft fDigitsFromRightToLeft = new FDigitsFromRightToLeft(in);
+    fDigitsFromRightToLeft.doTask();
 
-//    HPrimeNumber hPrimeNumber = new HPrimeNumber(in);
-//    hPrimeNumber.doTask();
+    GDigitsFromLeftToRight gDigitsFromLeftToRight = new GDigitsFromLeftToRight(in);
+    gDigitsFromLeftToRight.doTask();
 
-//    IFactorization iFactorization = new IFactorization(in);
-//    iFactorization.doTask();
+    HPrimeNumber hPrimeNumber = new HPrimeNumber(in);
+    hPrimeNumber.doTask();
+
+    IFactorization iFactorization = new IFactorization(in);
+    iFactorization.doTask();
 
     JPalindrome jPalindrome = new JPalindrome(in);
     jPalindrome.doTask();
