@@ -6,7 +6,7 @@ class View {
   static final String YOUR_NUMBER_IS_OUT_OF_RANGE = "Your number is out of range. ";
   static final String HIDDEN_NUMBER_LESS_THAN = "Hidden number less than ";
   static final String HIDDEN_NUMBER_GREATER_THAN = "Hidden number greater than ";
-  static final String YOU_GUESSED_HIDDEN_NUMBER = "You guessed hidden number!";
+  static final String YOU_GUESSED_HIDDEN_NUMBER = "You guessed hidden number! ";
   static final String ALL_HISTORY_OF_YOUR_ATTEMPTS = "\n\nAll history of your attempts:";
   static final String HIDDEN_NUMBER_IS = "Hidden number is ";
 
