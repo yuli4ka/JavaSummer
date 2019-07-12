@@ -47,6 +47,7 @@ class Controller {
     for (int number: previousAttempts) {
       if (model.isHiddenNumber(number)) {
         view.printMessage(View.YOU_GUESSED_HIDDEN_NUMBER);
+        view.printMessagePlusInt(View.HIDDEN_NUMBER_IS, number);
         return;
       } else if (model.lessThanHiddenNumber(number)) {
         view.printMessagePlusInt(View.HIDDEN_NUMBER_GREATER_THAN, number);
