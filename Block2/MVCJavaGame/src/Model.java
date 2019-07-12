@@ -14,8 +14,4 @@ class Model {
     return number < hiddenNumber;
   }
 
-  boolean greaterThanHiddenNumber(int number) {
-    return number > hiddenNumber;
-  }
-
 }
