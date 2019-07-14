@@ -1,3 +1,5 @@
+package calculations;
+
 import java.util.Scanner;
 
 class Controller {

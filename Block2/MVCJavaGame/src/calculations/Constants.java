@@ -1,3 +1,5 @@
+package calculations;
+
 public interface Constants {
 
   public static final int LOW = 0;

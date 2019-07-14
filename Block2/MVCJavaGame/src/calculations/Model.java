@@ -1,17 +1,23 @@
+package calculations;
+
 import java.util.ArrayList;
 
-class Model {
+public class Model {
 
   private int hiddenNumber;
   private int low;
   private int high;
   private ArrayList<String> history;
 
-  Model() {
+  public Model() {
     low = Constants.LOW;
     high = Constants.HIGH;
-    hiddenNumber = low + (int) (Math.random() * (high - low));
+    hiddenNumber = getRandomNumber(low, high);
     history = new ArrayList<>();
+  }
+
+  public int getRandomNumber(int low, int high) {
+    return low + 1 + (int) (Math.random() * (high - low - 1));
   }
 
   int getLow() {

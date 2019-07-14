@@ -1,3 +1,5 @@
+package calculations;
+
 class View {
 
   private static final String INPUT_NUMBER_BETWEEN = "\nInput number between ";
