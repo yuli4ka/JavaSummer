@@ -8,9 +8,9 @@ class Model {
   private ArrayList<String> history;
 
   Model() {
-    hiddenNumber = (int) (Math.random() * 100);
-    low = 0;
-    high = 100;
+    low = Constants.LOW;
+    high = Constants.HIGH;
+    hiddenNumber = low + (int) (Math.random() * (high - low));
     history = new ArrayList<>();
   }
 
