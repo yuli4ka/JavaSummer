@@ -1,10 +1,12 @@
+package problems;
+
 import java.util.Scanner;
 
 public class DExactDegreeOfTwo {
 
   private Scanner in;
 
-  DExactDegreeOfTwo(Scanner in) {
+  public DExactDegreeOfTwo(Scanner in) {
     this.in = in;
   }
 
@@ -19,7 +21,7 @@ public class DExactDegreeOfTwo {
     }
   }
 
-  private boolean recursion(int n) {
+  public boolean recursion(int n) {
     if (n == 2) {
       return true;
     }

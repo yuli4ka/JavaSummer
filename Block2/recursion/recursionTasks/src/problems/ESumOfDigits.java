@@ -1,14 +1,16 @@
+package problems;
+
 import java.util.Scanner;
 
-class ESumOfDigits {
+public class ESumOfDigits {
 
   private Scanner in;
 
-  ESumOfDigits(Scanner in) {
+  public ESumOfDigits(Scanner in) {
     this.in = in;
   }
 
-  void doTask() {
+  public void doTask() {
     System.out.println("\n\nThis task output sum of digits for number N");
     System.out.println("Input integer number N, please");
     int n = in.nextInt();
@@ -19,7 +21,7 @@ class ESumOfDigits {
     }
   }
 
-  private int digitsSum(int n) {
+  public int digitsSum(int n) {
     if (n < 10) {
       return n;
     }

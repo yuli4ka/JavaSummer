@@ -1,10 +1,12 @@
+package problems;
+
 import java.util.Scanner;
 
 public class CAckermanFunction {
 
   private Scanner in;
 
-  CAckermanFunction(Scanner in) {
+  public CAckermanFunction(Scanner in) {
     this.in = in;
   }
 
@@ -19,7 +21,7 @@ public class CAckermanFunction {
     }
   }
 
-  private int ackerman(int m, int n) {
+  public int ackerman(int m, int n) {
     if (m == 0) {
       return n + 1;
     } else if ((m > 0) && (n == 0)) {

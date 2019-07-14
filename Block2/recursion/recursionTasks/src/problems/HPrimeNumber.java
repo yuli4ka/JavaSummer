@@ -1,14 +1,16 @@
+package problems;
+
 import java.util.Scanner;
 
-class HPrimeNumber {
+public class HPrimeNumber {
 
   private Scanner in;
 
-  HPrimeNumber(Scanner in) {
+  public HPrimeNumber(Scanner in) {
     this.in = in;
   }
 
-  void doTask() {
+  public void doTask() {
     System.out.println("\n\nThis task checks if number N is prime");
     System.out.println("Input positive number N, please");
     int n = in.nextInt();
@@ -19,7 +21,7 @@ class HPrimeNumber {
     }
   }
 
-  private boolean isPrime(int n, int i) {
+  public boolean isPrime(int n, int i) {
     if (n == 1) {
       return false;
     }

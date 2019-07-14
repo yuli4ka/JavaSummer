@@ -1,10 +1,12 @@
+package problems;
+
 import java.util.Scanner;
 
 public class FDigitsFromRightToLeft {
 
   private Scanner in;
 
-  FDigitsFromRightToLeft(Scanner in) {
+  public FDigitsFromRightToLeft(Scanner in) {
     this.in = in;
   }
 
@@ -13,18 +15,17 @@ public class FDigitsFromRightToLeft {
     System.out.println("Input integer number N, please");
     int n = in.nextInt();
     if (n > 0) {
-      digitsFromRightToLeft(n);
+      System.out.println(digitsFromRightToLeft(n));
     } else {
-      digitsFromRightToLeft(-n);
+      System.out.println(digitsFromRightToLeft(-n));
     }
   }
 
-  private void digitsFromRightToLeft(int n) {
+  public String digitsFromRightToLeft(int n) {
     if (n < 10) {
-      System.out.print(n + " ");
+      return "" + n;
     } else {
-      System.out.print(n % 10 + " ");
-      digitsFromRightToLeft(n / 10);
+      return n % 10 + " " + digitsFromRightToLeft(n / 10);
     }
   }
 
