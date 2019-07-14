@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0be8bc05-eb92-4bb0-8ecf-12d16c738f53" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculations/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculations/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculations/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculations/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculations/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tryJUnitByVideo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tryJUnitByVideo/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0be8bc05-eb92-4bb0-8ecf-12d16c738f53" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +14,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/calculations/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="275">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="e#661#662#0" expanded="true" />
                 <element signature="e#695#696#0" expanded="true" />
@@ -39,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tests/ModelTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="123">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#202#203#0" expanded="true" />
@@ -130,7 +122,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563140473564" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563140507302" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -205,18 +197,35 @@
       <workItem from="1562928912541" duration="4970000" />
       <workItem from="1562934096433" duration="2589000" />
       <workItem from="1563136582732" duration="491000" />
-      <workItem from="1563138636757" duration="1658000" />
+      <workItem from="1563138636757" duration="2010000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ModelTest - 2019.07.15 at 00h 38m 33s.xml">
+      <configuration name="ModelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelTest - 2019.07.15 at 00h 38m 47s.xml">
+      <configuration name="ModelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelTest - 2019.07.15 at 00h 39m 08s.xml">
+      <configuration name="ModelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelTest - 2019.07.15 at 00h 39m 22s.xml">
+      <configuration name="ModelTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelTest - 2019.07.15 at 00h 41m 18s.xml">
+      <configuration name="ModelTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10379000" />
+    <option name="totallyTimeSpent" value="10731000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="716" y="25" width="650" height="743" extended-state="4" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.049668875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.254589" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -225,7 +234,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18566775" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17752443" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -281,8 +290,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/calculations/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="28" />
+        <state relative-caret-position="275">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="e#661#662#0" expanded="true" />
             <element signature="e#695#696#0" expanded="true" />
@@ -296,8 +305,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/ModelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        <state relative-caret-position="123">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#202#203#0" expanded="true" />
