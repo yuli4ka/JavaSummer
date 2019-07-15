@@ -17,16 +17,28 @@ public class HPrimeNumberTest {
   }
 
   @Test
-  public void isPrime() {
+  public void isPrime1() {
     if (!hPrimeNumber.isPrime(7,2)) {
       Assert.fail();
     }
+  }
+
+  @Test
+  public void isPrime2() {
     if (!hPrimeNumber.isPrime(19,2)) {
       Assert.fail();
     }
+  }
+
+  @Test
+  public void isPrime3() {
     if (hPrimeNumber.isPrime(10,2)) {
       Assert.fail();
     }
+  }
+
+  @Test
+  public void isPrime4() {
     if (hPrimeNumber.isPrime(1,2)) {
       Assert.fail();
     }

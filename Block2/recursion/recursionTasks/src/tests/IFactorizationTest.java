@@ -17,10 +17,14 @@ public class IFactorizationTest {
   }
 
   @Test
-  public void factorization() {
+  public void factorization1() {
     if (!iFactorization.factorization(45,2).equals("3 3 5 ")) {
       Assert.fail();
     }
+  }
+
+  @Test
+  public void factorization2() {
     if (!iFactorization.factorization(50,2).equals("2 5 5 ")) {
       Assert.fail();
     }

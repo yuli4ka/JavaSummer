@@ -17,13 +17,21 @@ public class ESumOfDigitsTest {
   }
 
   @Test
-  public void digitsSum() {
+  public void digitsSum1() {
     if (eSumOfDigits.digitsSum(3) != 3) {
       Assert.fail();
     }
+  }
+
+  @Test
+  public void digitsSum2() {
     if (eSumOfDigits.digitsSum(12356) != 17) {
       Assert.fail();
     }
+  }
+
+  @Test
+  public void digitsSum3() {
     if (eSumOfDigits.digitsSum(345) != 12) {
       Assert.fail();
     }

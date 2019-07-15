@@ -17,17 +17,24 @@ public class DExactDegreeOfTwoTest {
   }
 
   @Test
-  public void recursion() {
+  public void recursion1() {
     if (!dExactDegreeOfTwo.recursion(4)) {
-      Assert.fail();
-    }
-    if (!dExactDegreeOfTwo.recursion(32)) {
-      Assert.fail();
-    }
-    if (dExactDegreeOfTwo.recursion(5)) {
       Assert.fail();
     }
   }
 
+  @Test
+  public void recursion2() {
+    if (!dExactDegreeOfTwo.recursion(32)) {
+      Assert.fail();
+    }
+  }
+
+  @Test
+  public void recursion3() {
+    if (dExactDegreeOfTwo.recursion(5)) {
+      Assert.fail();
+    }
+  }
 
 }
