@@ -5,6 +5,7 @@ import calculations.Constants;
 import calculations.Model;
 import org.junit.Assert;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class ModelTest {
@@ -16,6 +17,7 @@ public class ModelTest {
     model = new Model();
   }
 
+  @Ignore
   @Test
   public void getRandomNumber() {
     for (int i = 0; i < 10000; i++) {
