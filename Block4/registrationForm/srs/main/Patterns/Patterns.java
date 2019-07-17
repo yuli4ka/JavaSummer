@@ -10,6 +10,10 @@ public class Patterns {
 
   private Pattern commentPattern;
 
+  private Pattern homePhonePattern;
+
+  private Pattern mobilePhonePattern;
+
   public Pattern getNamePattern() {
     return namePattern;
   }
@@ -22,4 +26,11 @@ public class Patterns {
     return commentPattern;
   }
 
+  public Pattern getHomePhonePattern() {
+    return homePhonePattern;
+  }
+
+  public Pattern getMobilePhonePattern() {
+    return mobilePhonePattern;
+  }
 }

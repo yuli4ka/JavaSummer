@@ -27,8 +27,11 @@ class Controller {
 
 //    model.setNickname(getForPattern(patterns.getCommentPattern(), View.ENTER_COMMENT));
 
-    model.setGroup(getGroup());
-
+//    model.setGroup(getGroup());
+    
+//    model.setHomePhone(getForPattern(patterns.getHomePhonePattern(), View.ENTER_HOME_PHONE_NUMBER));
+//    model.setMobilePhone(getForPattern(patterns.getMobilePhonePattern(), View.ENTER_MOBILE_PHONE_NUMBER));
+//    model.setMobilePhone2(getForPattern(patterns.getMobilePhonePattern(), View.ENTER_SECOND_MOBILE_PHONE_NUMBER));
 
 
 

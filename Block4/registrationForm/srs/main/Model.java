@@ -6,9 +6,7 @@ class Model {
   private String initialName;
   private String nickname;
   private String comment;
-  // group
   private String group;
-
   private String homePhone;
   private String mobilePhone;
   private String mobilePhone2;
@@ -61,6 +59,30 @@ class Model {
 
   String getGroup() {
     return group;
+  }
+
+  void setHomePhone(String phone) {
+    this.homePhone = phone;
+  }
+
+  String getHomePhone() {
+    return homePhone;
+  }
+
+  void setMobilePhone(String phone) {
+    this.mobilePhone = phone;
+  }
+
+  String getMobilePhone() {
+    return mobilePhone;
+  }
+
+  void setMobilePhone2(String phone2) {
+    this.mobilePhone2 = phone2;
+  }
+
+  String getMobilePhone2() {
+    return mobilePhone2;
   }
 
 }
