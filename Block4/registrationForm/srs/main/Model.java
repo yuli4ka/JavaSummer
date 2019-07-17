@@ -1,3 +1,12 @@
+class Adress {
+
+  String homeIndex;
+  String city;
+  String street;
+  int homeNumber;
+  int flatNumber;
+}
+
 class Model {
 
   private String surname;
@@ -10,8 +19,16 @@ class Model {
   private String homePhone;
   private String mobilePhone;
   private String mobilePhone2;
+
   private String eMail;
-  //
+  private String skype;
+
+  private Adress adress;
+
+  private String fullAdress;
+  private String creatingDate;
+  private String changeDate;
+
 
   void setSurname(String surname) {
     this.surname = surname;
@@ -53,6 +70,14 @@ class Model {
     return nickname;
   }
 
+  void setComment(String comment) {
+    this.comment = comment;
+  }
+
+  String getComment() {
+    return comment;
+  }
+
   void setGroup(String group) {
     this.group = group;
   }
@@ -85,4 +110,23 @@ class Model {
     return mobilePhone2;
   }
 
+  void seteMail(String eMail) {
+    this.eMail = eMail;
+  }
+
+  String geteMail() {
+    return eMail;
+  }
+
+  void setSkype(String skype) {
+    this.skype = skype;
+  }
+
+  String getSkype() {
+    return  skype;
+  }
+
+//  void setAdress() {
+//
+//  }
 }

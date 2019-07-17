@@ -18,23 +18,22 @@ class Controller {
   }
 
   void startTask() {
-//    model.setSurname(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_SURNAME));
-//    model.setName(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_NAME));
-//    model.setPatronymic(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_PATRONYMIC));
-//    model.setInitialName();
-//
-//    model.setNickname(getForPattern(patterns.getNicknamePattern(), View.ENTER_YOUR_NICKNAME));
+    model.setSurname(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_SURNAME));
+    model.setName(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_NAME));
+    model.setPatronymic(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_PATRONYMIC));
+    model.setInitialName();
 
-//    model.setNickname(getForPattern(patterns.getCommentPattern(), View.ENTER_COMMENT));
+    model.setNickname(getForPattern(patterns.getNicknamePattern(), View.ENTER_YOUR_NICKNAME));
 
-//    model.setGroup(getGroup());
-    
-//    model.setHomePhone(getForPattern(patterns.getHomePhonePattern(), View.ENTER_HOME_PHONE_NUMBER));
-//    model.setMobilePhone(getForPattern(patterns.getMobilePhonePattern(), View.ENTER_MOBILE_PHONE_NUMBER));
-//    model.setMobilePhone2(getForPattern(patterns.getMobilePhonePattern(), View.ENTER_SECOND_MOBILE_PHONE_NUMBER));
+    model.setComment(getForPattern(patterns.getCommentPattern(), View.ENTER_COMMENT));
 
+    model.setGroup(getGroup());
 
-
+    model.setHomePhone(getForPattern(patterns.getHomePhonePattern(), View.ENTER_HOME_PHONE_NUMBER));
+    model.setMobilePhone(
+        getForPattern(patterns.getMobilePhonePattern(), View.ENTER_MOBILE_PHONE_NUMBER));
+    model.setMobilePhone2(
+        getForPattern(patterns.getMobilePhonePattern(), View.ENTER_SECOND_MOBILE_PHONE_NUMBER));
 
   }
 
