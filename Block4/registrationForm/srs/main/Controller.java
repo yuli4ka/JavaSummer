@@ -1,4 +1,5 @@
 import Patterns.EnglishPatterns;
+import Patterns.Patterns;
 import java.util.Scanner;
 
 class Controller {
@@ -6,28 +7,40 @@ class Controller {
   private Model model;
   private View view;
   private Scanner in;
+  private Patterns patterns;
 
   Controller(Model model, View view) {
     this.model = model;
     this.view = view;
     in = new Scanner(System.in);
+    patterns = new EnglishPatterns();
   }
 
   void startTask() {
-    view.printMessage(View.YOUR_ANSWER_IS + getNameForPattern(View.ENTER_YOUR_SURNAME));
-    view.printMessage(View.YOUR_ANSWER_IS + getNameForPattern(View.ENTER_YOUR_NAME));
-    view.printMessage(View.YOUR_ANSWER_IS + getNameForPattern(View.ENTER_YOUR_PATRONYMIC));
+    model.setSurname(getNameForPattern(View.ENTER_YOUR_SURNAME));
+    model.setName(getNameForPattern(View.ENTER_YOUR_NAME));
+    model.setPatronymic(getNameForPattern(View.ENTER_YOUR_PATRONYMIC));
+    model.setInitialName();
+    view.printMessage(model.getInitialName());
   }
 
   private String getNameForPattern(String message) {
     view.printMessage(message);
     String name = in.nextLine();
-    while (!EnglishPatterns.namePattern.matcher(name).matches()) {
+    while (!patterns.getNamePattern().matcher(name).matches()) {
       view.printMessage(View.WRONG_INPUT);
       view.printMessage(message);
       name = in.nextLine();
     }
     return name;
   }
+
+//  private String getNicknmeForPattern() {
+//    view.printMessage(View.ENTER_YOUR_NICKNAME);
+//    String nickname = in.nextLine();
+//    while (!patterns.getNicknamePattern().matcher(nickname).matches()) {
+//
+//    }
+//  }
 
 }
