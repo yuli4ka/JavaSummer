@@ -7,6 +7,8 @@ class Model {
   private String nickname;
   private String comment;
   // group
+  private String group;
+
   private String homePhone;
   private String mobilePhone;
   private String mobilePhone2;
@@ -51,6 +53,14 @@ class Model {
 
   String getNickname() {
     return nickname;
+  }
+
+  void setGroup(String group) {
+    this.group = group;
+  }
+
+  String getGroup() {
+    return group;
   }
 
 }

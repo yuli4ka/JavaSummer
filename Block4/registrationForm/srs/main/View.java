@@ -6,6 +6,7 @@ class View {
   static final String ENTER_YOUR_PATRONYMIC = "Enter your patronymic";
   static final String ENTER_YOUR_NICKNAME = "Enter your nickname";
   static final String ENTER_COMMENT = "Enter comment";
+  static final String ENTER_GROUP = "Enter group name";
 
   void printMessage(String message) {
     System.out.println(message);

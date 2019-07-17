@@ -25,7 +25,29 @@ class Controller {
 //
 //    model.setNickname(getForPattern(patterns.getNicknamePattern(), View.ENTER_YOUR_NICKNAME));
 
-    model.setNickname(getForPattern(patterns.getCommentPattern(), View.ENTER_COMMENT));
+//    model.setNickname(getForPattern(patterns.getCommentPattern(), View.ENTER_COMMENT));
+
+    model.setGroup(getGroup());
+
+
+
+
+
+  }
+
+  private String getGroup() {
+    view.printMessage(View.ENTER_GROUP);
+    String answer = in.nextLine();
+    while (true) {
+      for (GroupEnum groupEnum : GroupEnum.values()) {
+        if (groupEnum.name().equalsIgnoreCase(answer)) {
+          return groupEnum.name();
+        }
+      }
+      view.printMessage(View.WRONG_INPUT);
+      view.printMessage(View.ENTER_GROUP);
+      answer = in.nextLine();
+    }
   }
 
   private String getForPattern(Pattern pattern, String message) {
