@@ -1,6 +1,7 @@
 import Patterns.EnglishPatterns;
 import Patterns.Patterns;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 class Controller {
 
@@ -17,37 +18,49 @@ class Controller {
   }
 
   void startTask() {
-//    model.setSurname(getNameForPattern(View.ENTER_YOUR_SURNAME));
-//    model.setName(getNameForPattern(View.ENTER_YOUR_NAME));
-//    model.setPatronymic(getNameForPattern(View.ENTER_YOUR_PATRONYMIC));
-//    model.setInitialName();
-//    view.printMessage(model.getInitialName());
+    model.setSurname(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_SURNAME));
+    model.setName(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_NAME));
+    model.setPatronymic(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_PATRONYMIC));
+    model.setInitialName();
 
-    model.setNickname(getNicknameForPattern());
+    model.setNickname(getForPattern(patterns.getNicknamePattern(), View.ENTER_YOUR_NICKNAME));
+
+    model.setComment(getForPattern(patterns.getCommentPattern(), View.ENTER_COMMENT));
+
+    model.setGroup(getGroup());
+
+    model.setHomePhone(getForPattern(patterns.getHomePhonePattern(), View.ENTER_HOME_PHONE_NUMBER));
+    model.setMobilePhone(
+        getForPattern(patterns.getMobilePhonePattern(), View.ENTER_MOBILE_PHONE_NUMBER));
+    model.setMobilePhone2(
+        getForPattern(patterns.getMobilePhonePattern(), View.ENTER_SECOND_MOBILE_PHONE_NUMBER));
+
   }
 
-  private String getNameForPattern(String message) {
+  private String getGroup() {
+    view.printMessage(View.ENTER_GROUP);
+    String answer = in.nextLine();
+    while (true) {
+      for (GroupEnum groupEnum : GroupEnum.values()) {
+        if (groupEnum.name().equalsIgnoreCase(answer)) {
+          return groupEnum.name();
+        }
+      }
+      view.printMessage(View.WRONG_INPUT);
+      view.printMessage(View.ENTER_GROUP);
+      answer = in.nextLine();
+    }
+  }
+
+  private String getForPattern(Pattern pattern, String message) {
     view.printMessage(message);
-    String name = in.nextLine();
-    while (!patterns.getNamePattern().matcher(name).matches()) {
+    String answer = in.nextLine();
+    while (!pattern.matcher(answer).matches()) {
       view.printMessage(View.WRONG_INPUT);
       view.printMessage(message);
-      name = in.nextLine();
+      answer = in.nextLine();
     }
-    return name;
+    return answer;
   }
-
-  private String getNicknameForPattern() {
-    view.printMessage(View.ENTER_YOUR_NICKNAME);
-    String nickname = in.nextLine();
-    while (!patterns.getNicknamePattern().matcher(nickname).matches()) {
-      view.printMessage(View.WRONG_INPUT);
-      view.printMessage(View.ENTER_YOUR_NICKNAME);
-      nickname = in.nextLine();
-    }
-    return nickname;
-  }
-
-
 
 }
