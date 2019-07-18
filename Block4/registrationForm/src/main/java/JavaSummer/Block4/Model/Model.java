@@ -1,13 +1,6 @@
-class Adress {
+package JavaSummer.Block4.Model;
 
-  String homeIndex;
-  String city;
-  String street;
-  int homeNumber;
-  int flatNumber;
-}
-
-class Model {
+public class Model {
 
   private String surname;
   private String name;
@@ -30,99 +23,99 @@ class Model {
   private String changeDate;
 
 
-  void setSurname(String surname) {
+  public void setSurname(String surname) {
     this.surname = surname;
   }
 
-  String getSurname() {
+  public String getSurname() {
     return surname;
   }
 
-  void setName(String name) {
+  public void setName(String name) {
     this.name = name;
   }
 
-  String getName() {
+  public String getName() {
     return name;
   }
 
-  void setPatronymic(String patronymic) {
+  public void setPatronymic(String patronymic) {
     this.patronymic = patronymic;
   }
 
-  String getPatronymic() {
+  public String getPatronymic() {
     return patronymic;
   }
 
-  void setInitialName() {
+  public void setInitialName() {
     initialName = surname + ' ' + name.charAt(0) + '.';
   }
 
-  String getInitialName() {
+  public String getInitialName() {
     return initialName;
   }
 
-  void setNickname(String nickname) {
+  public void setNickname(String nickname) {
     this.nickname = nickname;
   }
 
-  String getNickname() {
+  public String getNickname() {
     return nickname;
   }
 
-  void setComment(String comment) {
+  public void setComment(String comment) {
     this.comment = comment;
   }
 
-  String getComment() {
+  public String getComment() {
     return comment;
   }
 
-  void setGroup(String group) {
+  public void setGroup(String group) {
     this.group = group;
   }
 
-  String getGroup() {
+  public String getGroup() {
     return group;
   }
 
-  void setHomePhone(String phone) {
+  public void setHomePhone(String phone) {
     this.homePhone = phone;
   }
 
-  String getHomePhone() {
+  public String getHomePhone() {
     return homePhone;
   }
 
-  void setMobilePhone(String phone) {
+  public void setMobilePhone(String phone) {
     this.mobilePhone = phone;
   }
 
-  String getMobilePhone() {
+  public String getMobilePhone() {
     return mobilePhone;
   }
 
-  void setMobilePhone2(String phone2) {
+  public void setMobilePhone2(String phone2) {
     this.mobilePhone2 = phone2;
   }
 
-  String getMobilePhone2() {
+  public String getMobilePhone2() {
     return mobilePhone2;
   }
 
-  void seteMail(String eMail) {
+  public void seteMail(String eMail) {
     this.eMail = eMail;
   }
 
-  String geteMail() {
+  public String geteMail() {
     return eMail;
   }
 
-  void setSkype(String skype) {
+  public void setSkype(String skype) {
     this.skype = skype;
   }
 
-  String getSkype() {
+  public String getSkype() {
     return  skype;
   }
 

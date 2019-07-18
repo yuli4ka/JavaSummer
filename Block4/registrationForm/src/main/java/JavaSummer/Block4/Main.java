@@ -1,3 +1,9 @@
+package JavaSummer.Block4;
+
+import JavaSummer.Block4.Controller.Controller;
+import JavaSummer.Block4.Model.Model;
+import JavaSummer.Block4.View.View;
+
 public class Main {
 
   public static void main(String[] args) {

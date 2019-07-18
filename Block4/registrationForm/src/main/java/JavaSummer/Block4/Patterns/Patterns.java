@@ -1,4 +1,4 @@
-package Patterns;
+package JavaSummer.Block4.Patterns;
 
 import java.util.regex.Pattern;
 

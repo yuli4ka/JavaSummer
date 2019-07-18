@@ -1,23 +1,27 @@
-import Patterns.EnglishPatterns;
-import Patterns.Patterns;
+package JavaSummer.Block4.Controller;
+import JavaSummer.Block4.GroupEnum;
+import JavaSummer.Block4.Model.Model;
+import JavaSummer.Block4.Patterns.EnglishPatterns;
+import JavaSummer.Block4.Patterns.Patterns;
+import JavaSummer.Block4.View.View;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-class Controller {
+public class Controller {
 
   private Model model;
   private View view;
   private Scanner in;
   private Patterns patterns;
 
-  Controller(Model model, View view) {
+  public Controller(Model model, View view) {
     this.model = model;
     this.view = view;
     in = new Scanner(System.in);
     patterns = new EnglishPatterns();
   }
 
-  void startTask() {
+  public void startTask() {
     model.setSurname(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_SURNAME));
     model.setName(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_NAME));
     model.setPatronymic(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_PATRONYMIC));
