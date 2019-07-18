@@ -1,4 +1,4 @@
-package JavaSummer.Block4.Model;
+package main.java.JavaSummer.Block4.Model;
 
 class Adress {
 

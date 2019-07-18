@@ -1,8 +1,8 @@
-package JavaSummer.Block4;
+package main.java.JavaSummer.Block4;
 
-import JavaSummer.Block4.Controller.Controller;
-import JavaSummer.Block4.Model.Model;
-import JavaSummer.Block4.View.View;
+import main.java.JavaSummer.Block4.Controller.Controller;
+import main.java.JavaSummer.Block4.Model.Model;
+import main.java.JavaSummer.Block4.View.View;
 
 public class Main {
 

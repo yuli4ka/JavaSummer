@@ -1,11 +1,13 @@
-package JavaSummer.Block4.Controller;
-import JavaSummer.Block4.GroupEnum;
-import JavaSummer.Block4.Model.Model;
-import JavaSummer.Block4.Patterns.EnglishPatterns;
-import JavaSummer.Block4.Patterns.Patterns;
-import JavaSummer.Block4.View.View;
+package main.java.JavaSummer.Block4.Controller;
+import static main.java.JavaSummer.Block4.View.TextConstants.*;
+
 import java.util.Scanner;
 import java.util.regex.Pattern;
+import main.java.JavaSummer.Block4.Model.Model;
+import main.java.JavaSummer.Block4.Patterns.EnglishPatterns;
+import main.java.JavaSummer.Block4.Patterns.Patterns;
+import main.java.JavaSummer.Block4.View.View;
+
 
 public class Controller {
 
@@ -22,27 +24,27 @@ public class Controller {
   }
 
   public void startTask() {
-    model.setSurname(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_SURNAME));
-    model.setName(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_NAME));
-    model.setPatronymic(getForPattern(patterns.getNamePattern(), View.ENTER_YOUR_PATRONYMIC));
+    model.setSurname(getForPattern(patterns.getNamePattern(), ENTER_YOUR_SURNAME));
+    model.setName(getForPattern(patterns.getNamePattern(), ENTER_YOUR_NAME));
+    model.setPatronymic(getForPattern(patterns.getNamePattern(), ENTER_YOUR_PATRONYMIC));
     model.setInitialName();
 
-    model.setNickname(getForPattern(patterns.getNicknamePattern(), View.ENTER_YOUR_NICKNAME));
+    model.setNickname(getForPattern(patterns.getNicknamePattern(), ENTER_YOUR_NICKNAME));
 
-    model.setComment(getForPattern(patterns.getCommentPattern(), View.ENTER_COMMENT));
+    model.setComment(getForPattern(patterns.getCommentPattern(), ENTER_COMMENT));
 
     model.setGroup(getGroup());
 
-    model.setHomePhone(getForPattern(patterns.getHomePhonePattern(), View.ENTER_HOME_PHONE_NUMBER));
+    model.setHomePhone(getForPattern(patterns.getHomePhonePattern(), ENTER_HOME_PHONE_NUMBER));
     model.setMobilePhone(
-        getForPattern(patterns.getMobilePhonePattern(), View.ENTER_MOBILE_PHONE_NUMBER));
+        getForPattern(patterns.getMobilePhonePattern(), ENTER_MOBILE_PHONE_NUMBER));
     model.setMobilePhone2(
-        getForPattern(patterns.getMobilePhonePattern(), View.ENTER_SECOND_MOBILE_PHONE_NUMBER));
+        getForPattern(patterns.getMobilePhonePattern(), ENTER_SECOND_MOBILE_PHONE_NUMBER));
 
   }
 
   private String getGroup() {
-    view.printMessage(View.ENTER_GROUP);
+    view.printMessage(ENTER_GROUP);
     String answer = in.nextLine();
     while (true) {
       for (GroupEnum groupEnum : GroupEnum.values()) {
@@ -50,8 +52,8 @@ public class Controller {
           return groupEnum.name();
         }
       }
-      view.printMessage(View.WRONG_INPUT);
-      view.printMessage(View.ENTER_GROUP);
+      view.printMessage(WRONG_INPUT);
+      view.printMessage(ENTER_GROUP);
       answer = in.nextLine();
     }
   }
@@ -60,7 +62,7 @@ public class Controller {
     view.printMessage(message);
     String answer = in.nextLine();
     while (!pattern.matcher(answer).matches()) {
-      view.printMessage(View.WRONG_INPUT);
+      view.printMessage(WRONG_INPUT);
       view.printMessage(message);
       answer = in.nextLine();
     }
