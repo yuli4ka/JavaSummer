@@ -8,6 +8,7 @@ public interface TextConstants {
   String ENTER_YOUR_NICKNAME = "input.nickname.data";
   String ENTER_COMMENT = "input.comment.data";
   String ENTER_GROUP = "input.group.name.data";
+  String THERE_ARE_NEXT_GROUPS = "input.there.are.next.groups";
   String ENTER_HOME_PHONE_NUMBER = "input.home.phone.number.data";
   String ENTER_MOBILE_PHONE_NUMBER = "input.mobile.phone.number.data";
   String ENTER_SECOND_MOBILE_PHONE_NUMBER = "input.second.mobile.phone.number";

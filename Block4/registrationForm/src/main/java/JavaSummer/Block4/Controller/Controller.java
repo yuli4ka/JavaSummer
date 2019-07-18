@@ -1,4 +1,5 @@
 package main.java.JavaSummer.Block4.Controller;
+
 import static main.java.JavaSummer.Block4.View.TextConstants.*;
 
 import java.util.Scanner;
@@ -44,7 +45,11 @@ public class Controller {
   }
 
   private String getGroup() {
-    view.printMessage(ENTER_GROUP);
+    StringBuilder groups = new StringBuilder();
+    for (GroupEnum groupEnum : GroupEnum.values()) {
+      groups.append(groupEnum).append(" ");
+    }
+    view.printMessage(ENTER_GROUP, THERE_ARE_NEXT_GROUPS, groups.toString());
     String answer = in.nextLine();
     while (true) {
       for (GroupEnum groupEnum : GroupEnum.values()) {
@@ -52,8 +57,7 @@ public class Controller {
           return groupEnum.name();
         }
       }
-      view.printMessage(WRONG_INPUT);
-      view.printMessage(ENTER_GROUP);
+      view.printMessage(WRONG_INPUT, ENTER_GROUP, THERE_ARE_NEXT_GROUPS, groups.toString());
       answer = in.nextLine();
     }
   }
@@ -62,8 +66,7 @@ public class Controller {
     view.printMessage(message);
     String answer = in.nextLine();
     while (!pattern.matcher(answer).matches()) {
-      view.printMessage(WRONG_INPUT);
-      view.printMessage(message);
+      view.printMessage(WRONG_INPUT, message);
       answer = in.nextLine();
     }
     return answer;

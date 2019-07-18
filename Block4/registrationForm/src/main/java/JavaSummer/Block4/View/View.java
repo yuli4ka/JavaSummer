@@ -10,8 +10,16 @@ public class View {
       MESSAGE_BUNDLE_NAME);
 //  MESSAGE_BUNDLE_NAME, new Locale("ua", "UA"));
 
-  public void printMessage(String message) {
-    System.out.println(bundle.getString(message));
+  public void printMessage(String...messages) {
+    StringBuilder outMessage = new StringBuilder();
+    for (String message: messages) {
+      if (bundle.containsKey(message)) {
+        outMessage.append(bundle.getString(message)).append(" ");
+      } else {
+        outMessage.append(message).append(" ");
+      }
+    }
+    System.out.println(outMessage);
   }
 
 }
