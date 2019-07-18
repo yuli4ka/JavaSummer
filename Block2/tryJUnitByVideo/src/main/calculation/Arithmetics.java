@@ -1,4 +1,4 @@
-package calculation;
+package main.calculation;
 
 public class Arithmetics {
 
