@@ -1,12 +1,13 @@
 package main.java.JavaSummer.Block4.Controller;
 
 import static main.java.JavaSummer.Block4.View.TextConstants.*;
+import static main.java.JavaSummer.Block4.Controller.RegexConstants.*;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import main.java.JavaSummer.Block4.Model.Model;
-import main.java.JavaSummer.Block4.Patterns.EnglishPatterns;
-import main.java.JavaSummer.Block4.Patterns.Patterns;
 import main.java.JavaSummer.Block4.View.View;
 
 
@@ -15,32 +16,41 @@ public class Controller {
   private Model model;
   private View view;
   private Scanner in;
-  private Patterns patterns;
+
+  private static String REGEX_BUNDLE_NAME = "regex";
+  private ResourceBundle bundle = ResourceBundle.getBundle(
+      REGEX_BUNDLE_NAME,
+      new Locale(MyLocale.getLocale().getLanguage(), MyLocale.getLocale().getCountry()));
 
   public Controller(Model model, View view) {
     this.model = model;
     this.view = view;
     in = new Scanner(System.in);
-    patterns = new EnglishPatterns();
   }
 
   public void startTask() {
-    model.setSurname(getForPattern(patterns.getNamePattern(), ENTER_YOUR_SURNAME));
-    model.setName(getForPattern(patterns.getNamePattern(), ENTER_YOUR_NAME));
-    model.setPatronymic(getForPattern(patterns.getNamePattern(), ENTER_YOUR_PATRONYMIC));
-    model.setInitialName();
+    Notebook notebook = new Notebook();
+    notebook.setSurname(getForPattern(NAME_PATTERN, ENTER_YOUR_SURNAME));
+    notebook.setName(getForPattern(NAME_PATTERN, ENTER_YOUR_NAME));
+    notebook.setPatronymic(getForPattern(NAME_PATTERN, ENTER_YOUR_PATRONYMIC));
+    notebook.setNickname(getForPattern(NICKNAME_PATTERN, ENTER_YOUR_NICKNAME));
+    notebook.setComment(getForPattern(COMMENT_PATTERN, ENTER_COMMENT));
+    notebook.setGroup(getGroup());
+    notebook.setHomePhone(getForPattern(HOME_PHONE_PATTERN, ENTER_HOME_PHONE_NUMBER));
+    notebook.setMobilePhone(getForPattern(MOBILE_PHONE_PATTERN, ENTER_MOBILE_PHONE_NUMBER));
+    notebook.setMobilePhone2(getForPattern(MOBILE_PHONE_PATTERN, ENTER_SECOND_MOBILE_PHONE_NUMBER));
+    notebook.seteMail(getForPattern(E_MAIL_PATTERN, ENTER_EMAIL));
+    notebook.setSkype(getForPattern(SKYPE_PATTERN, ENTER_SKYPE));
 
-    model.setNickname(getForPattern(patterns.getNicknamePattern(), ENTER_YOUR_NICKNAME));
+    Adress adress = new Adress();
+    adress.setHomeIndex(getForPattern(HOME_INDEX_PATTERN, ENTER_HOME_INDEX));
+    adress.setCity(getForPattern(CITY_PATTERN, ENTER_CITY_NAME));
+    adress.setStreet(getForPattern(STREET_PATTERN, ENTER_STREET_NAME));
+    adress.setHomeNumber(Integer.parseInt(getForPattern(HOME_NUMBER_PATTERN, ENTER_HOME_NUMBER)));
+    adress.setFlatNumber(Integer.parseInt(getForPattern(APARTMENT_NUMBER_PATTERN, ENTER_FLAT_NUMBER)));
 
-    model.setComment(getForPattern(patterns.getCommentPattern(), ENTER_COMMENT));
+    notebook.setAdress(adress);
 
-    model.setGroup(getGroup());
-
-    model.setHomePhone(getForPattern(patterns.getHomePhonePattern(), ENTER_HOME_PHONE_NUMBER));
-    model.setMobilePhone(
-        getForPattern(patterns.getMobilePhonePattern(), ENTER_MOBILE_PHONE_NUMBER));
-    model.setMobilePhone2(
-        getForPattern(patterns.getMobilePhonePattern(), ENTER_SECOND_MOBILE_PHONE_NUMBER));
 
   }
 
@@ -62,11 +72,14 @@ public class Controller {
     }
   }
 
-  private String getForPattern(Pattern pattern, String message) {
-    view.printMessage(message);
+  private String getForPattern(String pattern, String message) {
+    String patternString = bundle.getString(pattern);
+    Pattern patternPattern = Pattern.compile(patternString);
+
+    view.printMessage(message, PATTERN_IS, patternString);
     String answer = in.nextLine();
-    while (!pattern.matcher(answer).matches()) {
-      view.printMessage(WRONG_INPUT, message);
+    while (!patternPattern.matcher(answer).matches()) {
+      view.printMessage(WRONG_INPUT, message, PATTERN_IS, patternString);
       answer = in.nextLine();
     }
     return answer;

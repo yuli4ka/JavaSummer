@@ -12,6 +12,13 @@ public interface TextConstants {
   String ENTER_HOME_PHONE_NUMBER = "input.home.phone.number.data";
   String ENTER_MOBILE_PHONE_NUMBER = "input.mobile.phone.number.data";
   String ENTER_SECOND_MOBILE_PHONE_NUMBER = "input.second.mobile.phone.number";
+  String PATTERN_IS = "pattern.is";
+  String ENTER_EMAIL = "input.email";
+  String ENTER_SKYPE = "input.skype";
 
-
+  String ENTER_HOME_INDEX = "input.home.index";
+  String ENTER_CITY_NAME = "input.city.name";
+  String ENTER_STREET_NAME = "input.street.name";
+  String ENTER_HOME_NUMBER = "input.home.number";
+  String ENTER_FLAT_NUMBER = "input.flat.number";
 }

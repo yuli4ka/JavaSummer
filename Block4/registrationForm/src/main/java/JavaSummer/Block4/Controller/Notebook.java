@@ -1,14 +1,10 @@
-package main.java.JavaSummer.Block4.Model;
+package main.java.JavaSummer.Block4.Controller;
 
-import main.java.JavaSummer.Block4.Controller.Adress;
-import main.java.JavaSummer.Block4.Controller.Notebook;
-
-public class Model {
+public class Notebook {
 
   private String surname;
   private String name;
   private String patronymic;
-  private String initialName;
   private String nickname;
   private String comment;
   private String group;
@@ -20,27 +16,6 @@ public class Model {
   private String skype;
 
   private Adress adress;
-
-  private String fullAdress;
-  private String creatingDate;
-  private String changeDate;
-
-  public void setAllByNotebook(Notebook notebook) {
-    setSurname(notebook.getSurname());
-    setName(notebook.getName());
-    setPatronymic(notebook.getPatronymic());
-    setInitialName();
-    setNickname(notebook.getNickname());
-    setComment(notebook.getComment());
-    setGroup(notebook.getGroup());
-    setHomePhone(notebook.getHomePhone());
-    setMobilePhone(notebook.getMobilePhone());
-    setMobilePhone2(notebook.getMobilePhone2());
-    seteMail(notebook.geteMail());
-    setSkype(notebook.getSkype());
-    setAdress(notebook.getAdress());
-    //date
-  }
 
   public void setSurname(String surname) {
     this.surname = surname;
@@ -64,14 +39,6 @@ public class Model {
 
   public String getPatronymic() {
     return patronymic;
-  }
-
-  private void setInitialName() {
-    initialName = surname + " " + name.charAt(0);
-  }
-
-  public String getInitialName() {
-    return initialName;
   }
 
   public void setNickname(String nickname) {
@@ -135,7 +102,7 @@ public class Model {
   }
 
   public String getSkype() {
-    return skype;
+    return  skype;
   }
 
   public Adress getAdress() {
@@ -145,15 +112,4 @@ public class Model {
   public void setAdress(Adress adress) {
     this.adress = adress;
   }
-
-  private void setFullAdress() {
-    fullAdress =
-        adress.getHomeIndex() + ", " + adress.getCity() + ", " + adress.getStreet() + " street, " + adress
-            .getHomeNumber() + ", flat №" + adress.getFlatNumber();
-  }
-
-  public String getFullAdress() {
-    return fullAdress;
-  }
-
 }

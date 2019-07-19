@@ -10,7 +10,7 @@ public interface RegexConstants {
   String E_MAIL_PATTERN = "pattern.email";
   String SKYPE_PATTERN = "pattern.skype";
   String HOME_INDEX_PATTERN = "pattern.address.index";
-  String SITY_PATTERN = "pattern.address.city";
+  String CITY_PATTERN = "pattern.address.city";
   String STREET_PATTERN = "pattern.address.street";
   String HOME_NUMBER_PATTERN = "pattern.address.home.number";
   String APARTMENT_NUMBER_PATTERN = "pattern.address.apartment.number";
