@@ -3,6 +3,8 @@ package main.java.JavaSummer.Block4.Controller;
 import static main.java.JavaSummer.Block4.View.TextConstants.*;
 import static main.java.JavaSummer.Block4.Controller.RegexConstants.*;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.Scanner;
@@ -30,6 +32,7 @@ public class Controller {
 
   public void startTask() {
     Notebook notebook = new Notebook();
+
     notebook.setSurname(getForPattern(NAME_PATTERN, ENTER_YOUR_SURNAME));
     notebook.setName(getForPattern(NAME_PATTERN, ENTER_YOUR_NAME));
     notebook.setPatronymic(getForPattern(NAME_PATTERN, ENTER_YOUR_PATRONYMIC));
@@ -43,6 +46,7 @@ public class Controller {
     notebook.setSkype(getForPattern(SKYPE_PATTERN, ENTER_SKYPE));
 
     Adress adress = new Adress();
+
     adress.setHomeIndex(getForPattern(HOME_INDEX_PATTERN, ENTER_HOME_INDEX));
     adress.setCity(getForPattern(CITY_PATTERN, ENTER_CITY_NAME));
     adress.setStreet(getForPattern(STREET_PATTERN, ENTER_STREET_NAME));
@@ -51,7 +55,13 @@ public class Controller {
 
     notebook.setAdress(adress);
 
+    model.setAllByNotebook(notebook);
 
+    SimpleDateFormat dateFormat = new SimpleDateFormat(bundle.getString(DATE_PATTERN));
+    model.setCreatingDate(dateFormat.format(new Date()));
+    model.setChangeDate(dateFormat.format(new Date()));
+
+    ouputAllData();
   }
 
   private String getGroup() {
@@ -83,6 +93,22 @@ public class Controller {
       answer = in.nextLine();
     }
     return answer;
+  }
+
+  private void ouputAllData() { // just for test
+    System.out.println(model.getSurname());
+    System.out.println(model.getName());
+    System.out.println(model.getPatronymic());
+    System.out.println(model.getInitialName());
+    System.out.println(model.getNickname());
+    System.out.println(model.getComment());
+    System.out.println(model.getGroup());
+    System.out.println(model.getHomePhone());
+    System.out.println(model.getMobilePhone());
+    System.out.println(model.getMobilePhone2());
+    System.out.println(model.geteMail());
+    System.out.println(model.getSkype());
+    System.out.println(model.getFullAdress());
   }
 
 }

@@ -1,5 +1,7 @@
 package main.java.JavaSummer.Block4.Model;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import main.java.JavaSummer.Block4.Controller.Adress;
 import main.java.JavaSummer.Block4.Controller.Notebook;
 
@@ -39,7 +41,7 @@ public class Model {
     seteMail(notebook.geteMail());
     setSkype(notebook.getSkype());
     setAdress(notebook.getAdress());
-    //date
+    setFullAdress();
   }
 
   public void setSurname(String surname) {
@@ -148,7 +150,8 @@ public class Model {
 
   private void setFullAdress() {
     fullAdress =
-        adress.getHomeIndex() + ", " + adress.getCity() + ", " + adress.getStreet() + " street, " + adress
+        adress.getHomeIndex() + ", " + adress.getCity() + ", " + adress.getStreet() + " street, "
+            + adress
             .getHomeNumber() + ", flat №" + adress.getFlatNumber();
   }
 
@@ -156,4 +159,19 @@ public class Model {
     return fullAdress;
   }
 
+  public void setCreatingDate(String creatingDate) {
+    this.creatingDate = creatingDate;
+  }
+
+  public String getCreatingDate() {
+    return creatingDate;
+  }
+
+  public void setChangeDate(String changeDate) {
+    this.changeDate = changeDate;
+  }
+
+  public String getChangeDate() {
+    return changeDate;
+  }
 }
