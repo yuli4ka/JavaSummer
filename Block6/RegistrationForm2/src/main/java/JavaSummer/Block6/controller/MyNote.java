@@ -1,6 +1,6 @@
-package JavaSummer.Block6.Controller;
+package JavaSummer.Block6.controller;
 
-public class Notebook {
+public class MyNote {
 
   private String surname;
   private String name;

@@ -1,10 +1,11 @@
-package JavaSummer.Block6.Model;
+package JavaSummer.Block6.model;
 
-import JavaSummer.Block6.Controller.Adress;
-import JavaSummer.Block6.Controller.Notebook;
-import JavaSummer.Block6.View.TextConstants;
+import JavaSummer.Block6.controller.Adress;
+import JavaSummer.Block6.controller.MyNote;
+import JavaSummer.Block6.controller.NicknameException;
+import JavaSummer.Block6.view.TextConstants;
 
-public class Model {
+public class Note {
 
   private String surname;
   private String name;
@@ -26,23 +27,23 @@ public class Model {
   private String creatingDate;
   private String changeDate;
 
-  public void setAllByNotebook(Notebook notebook) throws Exception {
-    if (Notebooks.containsNickname(notebook.getNickname())) {
-      throw new Exception(TextConstants.SAME_NICKNAME);
+  public void setAllByNotebook(MyNote myNote) throws NicknameException {
+    if (Notebooks.containsNickname(myNote.getNickname())) {
+      throw new NicknameException(TextConstants.SAME_NICKNAME, myNote.getNickname());
     }
-    setSurname(notebook.getSurname());
-    setName(notebook.getName());
-    setPatronymic(notebook.getPatronymic());
+    setSurname(myNote.getSurname());
+    setName(myNote.getName());
+    setPatronymic(myNote.getPatronymic());
     setInitialName();
-    setNickname(notebook.getNickname());
-    setComment(notebook.getComment());
-    setGroup(notebook.getGroup());
-    setHomePhone(notebook.getHomePhone());
-    setMobilePhone(notebook.getMobilePhone());
-    setMobilePhone2(notebook.getMobilePhone2());
-    seteMail(notebook.geteMail());
-    setSkype(notebook.getSkype());
-    setAdress(notebook.getAdress());
+    setNickname(myNote.getNickname());
+    setComment(myNote.getComment());
+    setGroup(myNote.getGroup());
+    setHomePhone(myNote.getHomePhone());
+    setMobilePhone(myNote.getMobilePhone());
+    setMobilePhone2(myNote.getMobilePhone2());
+    seteMail(myNote.geteMail());
+    setSkype(myNote.getSkype());
+    setAdress(myNote.getAdress());
     setFullAdress();
   }
 

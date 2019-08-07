@@ -1,6 +1,6 @@
-package JavaSummer.Block6.View;
+package JavaSummer.Block6.view;
 
-import JavaSummer.Block6.Controller.MyLocale;
+import JavaSummer.Block6.controller.MyLocale;
 import java.util.Locale;
 import java.util.ResourceBundle;
 

@@ -1,4 +1,4 @@
-package JavaSummer.Block6.Model;
+package JavaSummer.Block6.model;
 
 public enum Notebooks {
   note1("Zhytariiuk", "Yuli", "Vladimirovna", "Zhytariiuk Y.",

@@ -1,4 +1,4 @@
-package JavaSummer.Block6.View;
+package JavaSummer.Block6.view;
 
 public interface TextConstants {
   String WRONG_INPUT = "input.wrong.data";
@@ -22,7 +22,7 @@ public interface TextConstants {
   String ENTER_HOME_NUMBER = "input.home.number";
   String ENTER_FLAT_NUMBER = "input.flat.number";
 
-  String THAT_NICKNAME = "that.nickname";
+  String NICKNAME = "nickname";
   String IS_ALREADY_IN_DATABASE = "is.already.in.database";
   String SAME_NICKNAME = "same nickname";
 }

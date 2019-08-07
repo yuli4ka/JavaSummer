@@ -1,4 +1,4 @@
-package JavaSummer.Block6.Controller;
+package JavaSummer.Block6.controller;
 
 import java.util.Locale;
 
