@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import regForm.dto.NoteDTO;
+import regForm.exceptions.SameLoginException;
 import regForm.service.RegFormService;
 
 @Slf4j
@@ -26,8 +27,8 @@ public class RegFormController {
 
   @ResponseStatus(HttpStatus.CREATED)
   @RequestMapping(value = "/reg_form", method = RequestMethod.POST)
-  public void regFormController(NoteDTO note) {
-    System.out.println(note.toString());
+  public void regFormController(NoteDTO note) throws SameLoginException {
+    regFormService.inputNote(note);
   }
 
   @ExceptionHandler(RuntimeException.class)

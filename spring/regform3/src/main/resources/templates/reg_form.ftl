@@ -25,6 +25,7 @@
                  id="exampleInputName"
                  placeholder="First Name"
                  required
+                 pattern="^[A-Z][a-z]{1,30}$"
                  ng-model="auth.names">
         </div>
         <div class="form-group">
